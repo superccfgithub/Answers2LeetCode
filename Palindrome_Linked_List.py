@@ -1,6 +1,6 @@
 #question name:Palindrome Linked List
 #question link:https://leetcode.com/problems/palindrome-linked-list/
-#Runtime: 200 ms
+#Runtime: 188 ms
 
 #-------------------Submitted Code-------------------------
 # Definition for singly-linked list.
@@ -24,7 +24,7 @@ class Solution:
             l.append(l[n-1].next)
             n = n + 1
         lenth = len(l)
-        for i in range(0, lenth):
+        for i in range(0, lenth/2):
             if l[i].val != l[lenth-1-i].val:
                 return False
         return True
